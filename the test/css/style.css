@@ -1,0 +1,449 @@
+@font-face {
+    font-family: 'TheSansArabic';
+    src: url("/Fonts/Bahij_TheSansArabic-Black.otf") format('woff2'),
+         url('/Fonts/Bahij_TheSansArabic-Black.otf') format('woff');
+    font-weight: 600; 
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TheSansArabic';
+    src: url("/Fonts/Bahij_TheSansArabic-Bold.otf") format('woff2'),
+         url('/Fonts/Bahij_TheSansArabic-Bold.otf') format('woff');
+    font-weight: 700; 
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TheSansArabic';
+    src: url("/Fonts/Bahij_TheSansArabic-ExtraBold.otf") format('woff2'),
+         url('/Fonts/Bahij_TheSansArabic-ExtraBold.otf') format('woff');
+    font-weight: 800; 
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TheSansArabic';
+    src: url("/Fonts/Bahij_TheSansArabic-Light.otf") format('woff2'),
+         url('/Fonts/Bahij_TheSansArabic-Light.otf') format('woff');
+    font-weight: 100; 
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TheSansArabic';
+    src: url("/Fonts/Bahij_TheSansArabic-SemiBold.otf") format('woff2'),
+         url('/Fonts/Bahij_TheSansArabic-SemiBold.otf') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-color:#49bfe3;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.main{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    width: 100%;
+    height: 100vh;  
+    background-image: url(/pics/Login-bg.jpg);
+    background-size: cover;
+    background-position: center ;
+    font-family: "TheSansArabic";
+
+    
+}
+.main .leftSide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    color: white;
+    position: relative; /* Ensure parent is positioned relative */
+
+}
+
+.main .leftSide .text{
+text-align: right;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+
+.main .leftSide .text h1{
+    font-size: 80px;
+    font-family: 'TheSansArabic' , sans-serif;
+
+}
+
+.main .leftSide .downText {
+    text-align: right;
+    position: absolute; 
+    bottom: 0;
+    left: 0; 
+    width: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
+}
+
+.main .leftSide .downText .topText{
+    display: flex;
+    
+}
+
+.main .leftSide .downText .iconO{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.main .leftSide .downText .iconO img{
+width: 35px;
+padding-left: 10px;
+}
+
+.main .leftSide .downText .rights{
+font-size: 13px;
+padding-bottom: 10px;
+font-weight: 100;
+}
+
+
+
+.rightSide{
+    background-color: rgb(255, 255, 255);
+    border-top-left-radius:15px;
+    border-bottom-left-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+
+}
+
+.rightSide .topText {
+padding: 40px 0px;}
+.rightSide .topText p{
+    font-size: 30px;
+}
+.rightSide .topText span{
+    font-size: 33px;
+    font-weight: bold;
+}
+.rightSide .form p{
+    font-weight: 200;
+    color: #757575;
+    padding-top: 15px;
+}
+
+.rightSide .form .inputs a{
+    color: rgb(55, 149, 180);
+    text-decoration: none;
+}
+
+.rightSide .form  .buttons{
+  width: 100%;
+  color: white;
+  text-align: center;
+ 
+}
+
+
+.rightSide .form  .buttons .login{
+ background-color: var(--main-color);
+ padding: 15px 10px;
+ border-radius:20px ;
+ -webkit-border-radius:20px ;
+ -moz-border-radius:20px ;
+ -ms-border-radius:20px ;
+ -o-border-radius:20px ;
+ margin-top: 15px;
+ margin-bottom: 15px;
+}
+
+.rightSide .form  .buttons .create{
+ background-color: #d7eff6;
+ padding: 15px 10px;
+ border-radius: 20px;
+ -webkit-border-radius: 20px;
+ -moz-border-radius: 20px;
+ -ms-border-radius: 20px;
+ -o-border-radius: 20px;
+}
+.rightSide .form  .buttons .create a{
+    color: var(--main-color);
+}
+
+
+/*input style*/
+
+
+ .input-container {
+    position: relative;
+    margin: 50px auto;
+    width: 200px;
+  }
+  
+ .input-container input[type="text"], 
+ input[type="password"] {
+    font-size: 20px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 5px 0;
+    background-color: transparent;
+    outline: none;
+  }
+
+ 
+  .input-container .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #3c3c3c;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    text-align: right;
+  }
+  
+  .input-container input[type="text"]:focus ~ .label,
+  .input-container input[type="text"]:valid ~ .label {
+    top: -20px;
+    font-size: 16px;
+    color: #333;
+  }
+  .input-container input[type="password"]:focus ~ .label,
+  .input-container input[type="password"]:valid ~ .label {
+    top: -20px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .input-container .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #333;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+  }
+  
+ .input-container input[type="text"]:focus ~ .underline,
+  .input-container input[type="password"]:valid ~ .underline {
+    transform: scaleX(1);
+  }
+  
+
+  .input-container {
+    position: relative;
+    margin: 50px auto;
+    width: 200px;
+}
+
+.input-container input[type="text"],
+.input-container input[type="password"] {
+    font-size: 20px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 5px 0;
+    background-color: transparent;
+    outline: none;
+}
+
+.input-container .label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #3c3c3c;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    text-align: right;
+}
+
+.input-container input[type="text"]:focus ~ .label,
+.input-container input[type="text"]:valid ~ .label,
+.input-container input[type="password"]:focus ~ .label,
+.input-container input[type="password"]:valid ~ .label {
+    top: -20px;
+    font-size: 16px;
+    color: #333;
+}
+
+.input-container .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #333;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+}
+
+.input-container input[type="text"]:focus ~ .underline,
+.input-container input[type="text"]:valid ~ .underline,
+.input-container input[type="password"]:focus ~ .underline,
+.input-container input[type="password"]:valid ~ .underline {
+    transform: scaleX(1);
+}
+
+.error-input {
+    border-bottom: 2px solid red;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    top: 45px;
+    left: 0;
+}
+
+
+
+/*second page*/
+
+.main2{
+    display: grid;
+    grid-template-columns: 37% 63%;
+    width: 100%;
+    height: 100vh;  
+    background-image: url(/pics/Login-bg.jpg);
+    background-size: cover;
+    background-position: center ;
+    font-family: "TheSansArabic";
+
+    
+}
+
+/*second page leftside*/
+
+
+.main2 .leftSide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    color: white;
+    position: relative; 
+}
+
+
+.main2 .leftSide .text{
+text-align: right;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+
+.main2 .leftSide .text h1{
+    font-size: 80px;
+    font-family: 'TheSansArabic' , sans-serif;
+
+}
+
+.main2 .leftSide .downText {
+    text-align: right;
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; 
+}
+
+.main2 .leftSide .downText .topText{
+    display: flex;
+    
+}
+
+.main2 .leftSide .downText .iconO{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.main2 .leftSide .downText .iconO img{
+width: 35px;
+padding-left: 10px;
+}
+
+.main2 .leftSide .downText .rights{
+font-size: 13px;
+padding-bottom: 10px;
+font-weight: 100;
+}
+
+
+/*second page rightside*/
+
+.main2 .rightSide {
+font-size: 20px;
+
+}
+
+.main2 .rightSide .topText {
+font-size: 20px;
+
+}
+
+.main2 .rightSide p{
+font-size: 20px;
+}
+
+.main2 .rightSide .inputs .inputO{
+display: flex;
+justify-content: space-between;
+
+}
+.main2 .rightSide .inputs .inputO .input-container{
+padding: 10px;
+
+}
+
+
+.main2  .buttons .login{
+    background-color: var(--main-color);
+    padding: 7px;
+    border-radius:20px ;
+    -webkit-border-radius:20px ;
+    -moz-border-radius:20px ;
+    -ms-border-radius:20px ;
+    -o-border-radius:20px ;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   }
+   
+
+.main2  .buttons .login img{
+width: 30px;
+padding-right: 10px;
+
+   }
+   
